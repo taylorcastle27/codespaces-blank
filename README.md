@@ -2,6 +2,8 @@
 
 This project is set up to help you learn C++ by building and running small programs.
 
+Please feel to use for your own purposes.
+
 ## What is here
 
 - `src/lesson_01_hello.cpp`: a first program with output, variables, and strings
