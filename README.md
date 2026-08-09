@@ -6,6 +6,7 @@ This project is set up to help you learn C++ by building and running small progr
 
 - `src/lesson_01_hello.cpp`: a first program with output, variables, and strings
 - `src/lesson_02_types.cpp`: functions, vectors, loops, and references
+- `src/mad_libs.cpp`: a simple word-based Mad Libs program
 - `exercises/exercise_01_fizzbuzz.cpp`: a basic control-flow exercise
 - `exercises/exercise_02_vector_stats.cpp`: a small exercise using vectors and functions
 
@@ -21,6 +22,7 @@ cmake --build build
 ```bash
 ./build/lesson_01_hello
 ./build/lesson_02_types
+./build/mad_libs
 ./build/exercise_01_fizzbuzz
 ./build/exercise_02_vector_stats
 ```
