@@ -23,13 +23,13 @@ int main() {
    cout << "0: Boston  1: Chicago  2: Los Angeles" << endl;
 
    cout << "Enter city pair (Ex: 1 2) -- ";
-   cin >> cityA;
-   cin >> cityB;
-
-   if ((cityA >= 0) && (cityA <= 2) && (cityB >= 0) && (cityB <= 2)) {
-      cout << "Distance: " << drivingDistances[cityA][cityB];
-      cout << " miles." << endl;
+   if (!(cin >> cityA >> cityB) || cityA < 0 || cityA > 2 || cityB < 0 || cityB > 2) {
+      cerr << "Enter two city numbers from 0 to 2." << endl;
+      return 1;
    }
+
+   cout << "Distance: " << drivingDistances[cityA][cityB];
+   cout << " miles." << endl;
 
    return 0;
 }

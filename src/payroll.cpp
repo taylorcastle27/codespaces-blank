@@ -6,10 +6,16 @@ int main() {
     double hourly_rate;
 
     std::cout << "Enter hours worked: ";
-    std::cin >> hours;
+    if (!(std::cin >> hours) || hours < 0) {
+        std::cerr << "Hours worked must be a non-negative number.\n";
+        return 1;
+    }
 
     std::cout << "Enter hourly rate: ";
-    std::cin >> hourly_rate;
+    if (!(std::cin >> hourly_rate) || hourly_rate < 0) {
+        std::cerr << "Hourly rate must be a non-negative number.\n";
+        return 1;
+    }
 
     const double gross_pay = hours * hourly_rate;
 

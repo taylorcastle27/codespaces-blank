@@ -10,7 +10,10 @@ int main() {
    cout << "Enter " << NUM_VALS << " integer values..." << endl;
    for (i = 0; i < userVals.size(); ++i) {
       cout << "Value: ";
-      cin >> userVals.at(i);
+      if (!(cin >> userVals.at(i))) {
+         cerr << "Each value must be an integer." << endl;
+         return 1;
+      }
    }
    
    cout << "You entered: ";

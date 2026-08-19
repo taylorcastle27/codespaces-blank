@@ -13,12 +13,13 @@ int main() {
    oldestPeople.at(4) = 116; // Died 2006 in Ecuador
 
    cout << "Enter N (1..5): ";
-   cin  >> nthPerson;
-
-   if ((nthPerson >= 1) && (nthPerson <= 5)) {
-      cout << "The #" << nthPerson << " oldest person lived ";
-      cout << oldestPeople.at(nthPerson - 1) << " years." << endl;
+   if (!(cin >> nthPerson) || nthPerson < 1 || nthPerson > 5) {
+      cerr << "N must be an integer from 1 to 5." << endl;
+      return 1;
    }
+
+   cout << "The #" << nthPerson << " oldest person lived ";
+   cout << oldestPeople.at(nthPerson - 1) << " years." << endl;
 
    return 0;
 }

@@ -9,7 +9,10 @@ int main() {
 
    while (numAsterisk >= 0) {
       cout << "Enter an integer (negative to quit): ";
-      cin >> numAsterisk;
+      if (!(cin >> numAsterisk)) {
+         cerr << "Please enter an integer." << endl;
+         return 1;
+      }
       
       if (numAsterisk >= 0) {
          cout << "Depicted graphically:" << endl;

@@ -27,6 +27,11 @@ int main() {
    cout << "Enter a time period: "  << endl;
    cin  >> wordTimePeriod;
 
+   if (!cin) {
+      cerr << "Unable to read all story words." << endl;
+      return 1;
+   }
+
    // Tell the story
    cout << endl;
    cout << "My " << wordRelative << " says eating " << wordFood << endl;

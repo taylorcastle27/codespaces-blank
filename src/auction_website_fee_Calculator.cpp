@@ -44,7 +44,10 @@ int main() {
    double sellingPrice;  // User defined selling price
 
    cout << "Enter item selling price (Ex: 65.00): ";
-   cin >> sellingPrice;
+   if (!(cin >> sellingPrice) || sellingPrice < 0) {
+      cerr << "Selling price must be a non-negative number." << endl;
+      return 1;
+   }
 
    cout << "eBay fee: $" << CalcEbayFee(sellingPrice) << endl;
 

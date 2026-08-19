@@ -7,7 +7,10 @@ int main() {
    int usaIndex;
 
    cout << "Enter text: ";
-   getline(cin, userText);
+   if (!getline(cin, userText)) {
+      cerr << "Unable to read text." << endl;
+      return 1;
+   }
 
    // At least one occurrence exists
    while (userText.find("U.S.A.") != string::npos) {

@@ -10,7 +10,10 @@ int main() {
    
    // Get day of reservation
    cout << "Day of reservation (T/W/R/F/S/U): ";
-   cin >> day;
+   if (!(cin >> day) || (day != 'T' && day != 'W' && day != 'R' && day != 'F' && day != 'S' && day != 'U')) {
+      cerr << "Enter one of: T, W, R, F, S, or U." << endl;
+      return 1;
+   }
    if (day == 'F' || day == 'S' || day == 'U') {
       isWeekend = true;
    }
@@ -20,7 +23,10 @@ int main() {
    
    // Get party size
    cout << "Enter party size: ";
-   cin  >> partySize;
+   if (!(cin >> partySize) || partySize < 1) {
+      cerr << "Party size must be a positive integer." << endl;
+      return 1;
+   }
    isLargeParty = (partySize > 6);
    
    // Determine wait time based on day of week and party size

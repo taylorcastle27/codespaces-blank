@@ -8,10 +8,16 @@ int main() {
    int i;                  // Loop variable
 
    cout << "Enter initial savings: ";
-   cin  >> initialSavings;
+   if (!(cin >> initialSavings) || initialSavings < 0) {
+      cerr << "Initial savings must be a non-negative number." << endl;
+      return 1;
+   }
 
    cout << "Enter interest rate: ";
-   cin  >> interestRate;
+   if (!(cin >> interestRate)) {
+      cerr << "Interest rate must be a number." << endl;
+      return 1;
+   }
 
    cout << endl << "Annual savings for 10 years: " << endl;
 

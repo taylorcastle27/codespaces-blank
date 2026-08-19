@@ -2,9 +2,15 @@ cmake_minimum_required(VERSION 3.16)
 
 project(cpp_learning LANGUAGES CXX)
 
+enable_testing()
+
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
+
+if(CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang")
+	add_compile_options(-Wall -Wextra -Wpedantic)
+endif()
 
 add_executable(lesson_01_hello src/lesson_01_hello.cpp)
 add_executable(lesson_02_types src/lesson_02_types.cpp)
@@ -19,6 +25,8 @@ add_executable(nested_loop_histogram src/nested_loop_histogram.cpp)
 add_executable(savings_intrest_program src/savings_intrest_program.cpp)
 add_executable(oldest_person_vectors src/oldest_person_vectors.cpp)
 add_executable(vectors_with_loops src/vectors_with_loops.cpp)
-add_executable(two_dimentonal_array src/two_dimentonal_array.cpp)
+add_executable(two_dimensional_array src/two_dimensional_array.cpp)
 add_executable(test_harness_functions src/test_harness_functions.cpp)
 add_executable(auction_website_fee_calculator src/auction_website_fee_Calculator.cpp)
+
+add_test(NAME test_harness_functions COMMAND test_harness_functions)

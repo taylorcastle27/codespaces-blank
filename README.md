@@ -2,7 +2,7 @@
 
 This project is set up to help you learn C++ by building and running small programs.
 
-Please feel to use for your own purposes.
+Please feel free to use it for your own purposes.
 
 ## What is here
 
@@ -11,6 +11,17 @@ Please feel to use for your own purposes.
 - `src/mad_libs.cpp`: a simple word-based Mad Libs program
 - `exercises/exercise_01_fizzbuzz.cpp`: a basic control-flow exercise
 - `exercises/exercise_02_vector_stats.cpp`: a small exercise using vectors and functions
+- `src/payroll.cpp`: calculates gross pay from hours and an hourly rate
+- `src/restaurant_wait_time.cpp`: estimates a restaurant wait time
+- `src/replace_occurences_of_a_word.cpp`: replaces occurrences of `U.S.A.` in text
+- `src/nested_loop.cpp`: demonstrates nested loops
+- `src/nested_loop_histogram.cpp`: prints a histogram from user input
+- `src/savings_intrest_program.cpp`: projects savings over ten years
+- `src/oldest_person_vectors.cpp`: looks up ages in a vector
+- `src/vectors_with_loops.cpp`: reads and displays vector values
+- `src/two_dimensional_array.cpp`: finds driving distances in a two-dimensional array
+- `src/test_harness_functions.cpp`: demonstrates assertions in a small test harness
+- `src/auction_website_fee_Calculator.cpp`: calculates an auction listing fee
 
 ## Build
 
@@ -27,6 +38,17 @@ cmake --build build
 ./build/mad_libs
 ./build/exercise_01_fizzbuzz
 ./build/exercise_02_vector_stats
+./build/payroll
+./build/restaurant_wait_time
+./build/replace_occurences_of_a_word
+./build/nested_loop
+./build/nested_loop_histogram
+./build/savings_intrest_program
+./build/oldest_person_vectors
+./build/vectors_with_loops
+./build/two_dimensional_array
+./build/test_harness_functions
+./build/auction_website_fee_calculator
 ```
 
 ## Suggested path
