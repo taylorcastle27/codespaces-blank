@@ -28,5 +28,6 @@ add_executable(vectors_with_loops src/vectors_with_loops.cpp)
 add_executable(two_dimensional_array src/two_dimensional_array.cpp)
 add_executable(test_harness_functions src/test_harness_functions.cpp)
 add_executable(auction_website_fee_calculator src/auction_website_fee_Calculator.cpp)
+add_executable(monetary_change src/monetary_change.cpp)
 
 add_test(NAME test_harness_functions COMMAND test_harness_functions)
