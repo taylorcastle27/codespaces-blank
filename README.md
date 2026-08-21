@@ -66,3 +66,7 @@ cmake --build build
 3. constructors and object lifetime
 4. smart pointers and RAII
 5. STL algorithms like `std::sort`, `std::find`, and `std::accumulate`
+
+## Learning board
+
+See `KANBAN.md` for a kanban-style roadmap that extends the suggested path with next steps, backlog items, and longer-term ideas.
